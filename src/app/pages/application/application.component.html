@@ -1,45 +1,146 @@
-<div class="d-flex" id="wrapper">
+<!-- <div class="d-flex" id="wrapper">
+    
+    <app-sidebar><app-sidebar>
+   
+  <div id="page-content-wrapper">
 
-    <app-sidebar></app-sidebar>
-  
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-  
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle"><i class="fas fa-bars"></i></button>
-  
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-  
       <div class="container-fluid">
-        <router-outlet></router-outlet>
+          <app-recursos></app-recursos>
       </div>
-    </div>
-    <!-- /#page-content-wrapper -->
   
-  </div>
-  <!-- /#wrapper -->
+  </div>-->
+
+
+
+  
+  <div class="d-flex" id="wrapper">
+
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">
+            <img src="../assets/logo.png" alt="">
+        </div>
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+        </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+  
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <!--  <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class='date'>
+                <span>27/01/2019 |  17:34 hs</span>
+              </li>
+              <li class="nav-item active">
+                <a class="shadow-sm nav-link circle-custom" href="#">EL <span class="sr-only">(current)</span></a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+        </nav>
+  
+        <div class="container-fluid bg-custom-1">
+            <h2>Saldo de Envases</h2>
+            <div class="d-flex p-2 bd-highlight header-content">
+              <form class="custom-form" >
+                  <div class="d-flex justify-content-center">
+                      <select>
+                          <option value="" disabled selected>Distribuidor</option>
+                          <option>Distribuidor 1</option>
+                          <option>Distribuidor 2</option>
+                      </select>
+
+                      <select>
+                          <option value="" disabled selected>Fecha desde</option>
+                          <option>27/2/2019</option>
+                      </select>      
+
+                      <select>
+                          <option value="" disabled selected>Fecha hasta</option>
+                          <option>27/2/2019</option>
+                      </select>  
+
+                      <select>
+                          <option value="" disabled selected>Envase</option>
+                          <option value="1">Envase 1</option>
+                        </select>
+                  </div>   
+
+                  <div id='filter' class="d-flex flex-row-reverse ">
+                    <button type="button" class="shadow-sm btn btn-warning">Aplicar</button>
+                    <p>Última actualización 31/01/2019 | 15.00 </p>
+                  </div>
+              </form>
+              
+          </div>   
+
+          <div id='search_info' class="d-flex">
+              <span class='font-weight-bold'>86 registros encontrados<span class='font-weight-lighter'>Unidad de información: Pesos</span></span>
+          </div>     
+          
+          <div class="alert alert-secondary">
+              <strong>Total saldo Fecha inicio</strong> $ -25.100.100
+              <strong>Total saldo Fecha inicio</strong> $ -25.100.100
+            </div>
+          <div class='table_wrapper'>
+          <table class="table  table-striped">
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+                </tr>
+                <tr>
+                  <td>Mary</td>
+                  <td>Moe</td>
+                  <td>mary@example.com</td>
+                </tr>
+                <tr>
+                  <td>July</td>
+                  <td>Dooley</td>
+                  <td>july@example.com</td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+  
+    </div>
+    <!-- /#wrapper -->

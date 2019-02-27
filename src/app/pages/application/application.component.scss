@@ -19,6 +19,46 @@
   
   #page-content-wrapper {
     min-width: 100vw;
+    .navbar{
+      padding: 0.85rem;
+    }
+    #navbarSupportedContent{
+      .date{
+        margin-top: 0.4em !important;
+        color: darkgrey;
+      }
+
+      li{
+        span {
+          font-size: 15px;
+          opacity: 0.7;
+          margin-right: 17px;
+        }
+
+        
+      }  
+    }
+    .container-fluid{
+      height: 100%;
+      h2{
+        padding: 1.1em;
+        font-size: 1.3em;
+        color: #F57232;
+      }
+      #search_info{
+        margin: 1em;
+      }
+
+      .table_wrapper{
+        background: white;
+        border-radius: 16px;
+          
+        table { border-radius: 0.9em; }
+      }
+
+      
+    }
+    
   }
   
   #wrapper.toggled #sidebar-wrapper {
@@ -33,6 +73,47 @@
     #page-content-wrapper {
       min-width: 0;
       width: 100%;
+      background:#e6e3e57a;
+      .header-content{
+        height: 10rem;
+        border-radius: 12px;
+        background: white;
+        .custom-form{
+          margin-top: 0.7em;
+        
+          select {
+            padding: 0.5rem;
+            width: 17rem;
+            margin-left: 4.6em;
+            border-radius: 1.0rem!important;
+          }
+
+          #filter{
+            margin-top: 1.7%;
+            button{
+              width: 9%;
+              border-radius: 4em;
+              color: white;
+              .rounded{
+                border-radius: 1.5em
+              }
+            }
+
+            p{
+              margin-top: 0.2em;
+              margin-bottom: 0rem;
+              margin-right: 2em;
+              color: darkgrey;
+            }
+          }
+        
+        }
+
+       
+      }
+
+
+      
     }
   
     #wrapper.toggled #sidebar-wrapper {
@@ -40,3 +121,26 @@
     }
   }
   
+
+
+
+  .p-2 {
+    padding: 1.5rem!important;
+    /* padding: 0.6rem; */
+  }
+
+
+//Colores personalizados
+.bg-custom-1{
+  background: #e6e3e57a
+}
+
+//Figuras personalizadas
+.circle-custom{
+  background: #fbc528;
+  width: 39px;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 2rem;
+  text-align: center;
+}
